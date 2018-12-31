@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CreditsFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/credit_bal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/bigTextStyle"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/credit_balance"
+                    android:id="@+id/credit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/credit_text"
+                    android:background="@color/iconColor"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    style="@style/smallTextStyle"
+                    android:text="@string/main"
+                    android:id="@+id/main_text"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/smallTextStyle"
+                    tools:text="N32.87"
+                    android:id="@+id/main"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toRightOf="@+id/bonus_text"
+                    android:layout_toEndOf="@+id/bonus_text"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/smallTextStyle"
+                    android:text="@string/bonus"
+                    android:id="@+id/bonus_text"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/main_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/smallTextStyle"
+                    tools:text="N10.84"
+                    android:id="@+id/bonus"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toRightOf="@+id/bonus_text"
+                    android:layout_toEndOf="@+id/bonus_text"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/smallTextStyle"
+                    android:text="@string/total"
+                    android:id="@+id/total_text"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/bonus_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/smallTextStyle"
+                    tools:text="N20.67"
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/total"
+                    android:layout_toRightOf="@+id/bonus_text"
+                    android:layout_toEndOf="@+id/bonus_text"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/bonus_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:text="@string/buy_credit"
+                    android:layout_marginTop="150dp"
+                    android:id="@+id/buy_credit_button"
+                    android:layout_below="@+id/total"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:visibility="gone"
+                android:layout_below="@+id/credit_bal_layout"
+                android:id="@+id/card_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/bigTextStyle"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/trans_details"
+                    android:id="@+id/trans_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_below="@+id/trans_text"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/iconColor"
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <EditText
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/line2"
+                    android:id="@+id/amount_et"
+                    android:hint="@string/amount"
+                    android:inputType="numberDecimal"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_below="@+id/line2"
+                    android:id="@+id/email_et"
+                    android:hint="@string/email"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/amount_et"
+                    android:layout_toRightOf="@+id/amount_et"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_below="@+id/amount_et"
+                    android:id="@+id/fname_et"
+                    android:hint="@string/fname"
+                    android:inputType="textPersonName"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_below="@+id/amount_et"
+                    android:id="@+id/lname_et"
+                    android:hint="@string/lname"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/fname_et"
+                    android:layout_toRightOf="@+id/fname_et"
+                    android:inputType="textPersonName"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="@string/cancel"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/cancel_button"
+                    android:layout_below="@+id/fname_et"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp" />
+
+                <Button
+                    android:text="@string/proceed"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/proceed_button"
+                    android:layout_below="@+id/fname_et"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

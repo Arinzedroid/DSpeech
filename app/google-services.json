@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "201475880651",
+    "firebase_url": "https://dspeech-203515.firebaseio.com",
+    "project_id": "dspeech-203515",
+    "storage_bucket": "dspeech-203515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201475880651:android:d1ea4984c16e4ae3",
+        "android_client_info": {
+          "package_name": "tech.arinzedroid.dspeech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201475880651-5nrdl25vk6c435prlph3sd1h2nt8aa5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.arinzedroid.dspeech",
+            "certificate_hash": "e14e5f7f5816de3695ae105c587061db0da65bec"
+          }
+        },
+        {
+          "client_id": "201475880651-no67enbfm3le26edbmq25ki7q0q9qmos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKR55O9Whkekw-17YHKVWzAYW6FlTO4J0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201475880651-no67enbfm3le26edbmq25ki7q0q9qmos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

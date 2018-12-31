@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:layout_toStartOf="@+id/refresh_button"
+        android:layout_toLeftOf="@+id/refresh_button"
+        tools:text="This is the reason why some cool things happen to cool people"
+        android:id="@+id/display_text"
+        android:gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_refresh"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:id="@+id/refresh_button"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <ProgressBar
+        android:visibility="gone"
+        android:padding="5dp"
+        style="?android:attr/progressBarStyleSmall"
+        android:id="@+id/progress_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+</RelativeLayout>
+
+

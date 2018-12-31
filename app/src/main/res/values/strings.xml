@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DSpeech</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="capture_voice">Start Voice Capture</string>
+    <string name="end_capture">Capturing&#8230; (click to transcribe)</string>
+    <string name="end_call">End Call</string>
+    <string name="total">Total</string>
+    <string name="bonus">Bonus</string>
+    <string name="main">Main</string>
+    <string name="credit_balance">Credit Balance</string>
+    <string name="buy_credit">Buy Credit</string>
+    <string name="proceed">Proceed</string>
+    <string name="cancel">Cancel</string>
+    <string name="fname">FirstName</string>
+    <string name="lname">LastName</string>
+    <string name="email">Email</string>
+    <string name="amount">Amount</string>
+    <string name="refresh">Refresh</string>
+    <string name="clear">Clear all</string>
+    <string name="sign_out">Sign out</string>
+    <string name="trans_details">Enter Transaction Details</string>
+    <string name="api_key">AIzaSyDDG0gjBHybO6t-a3O2QKIFLfME6XGJntU</string>
+    <string name="client_id">201475880651-ttc7gcii8qsoe79ipics3831mij4robc.apps.googleusercontent.com</string>
+    <string-array name="languages">
+        <item>English(NG)</item>
+        <item>English(UK)</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Italian</item>
+    </string-array>
+</resources>

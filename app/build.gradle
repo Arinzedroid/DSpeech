@@ -1,0 +1,121 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "tech.arinzedroid.dspeech"
+        multiDexEnabled = true
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'dspeech'
+            keyPassword 'D_speech'
+            storePassword 'D-speech'
+            storeFile file('../keystore/Dspeech.jks')
+        }
+        release {
+            keyAlias 'dspeech'
+            keyPassword 'D_speech'
+            storePassword 'D-speech'
+            storeFile file('../keystore/Dspeech.jks')
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:27.1.1'
+
+    //Retrofit for HTTP calls
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //handle data bindings using butterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.google.firebase:firebase-firestore:17.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //firebase auth
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
+
+    //google auth
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+
+    //Logging Interceptor for http
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    //rave payment api library
+    implementation 'com.github.Flutterwave:rave-android:1.0.18'
+
+    //multidex dependency
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //Viewmodel
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    api('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

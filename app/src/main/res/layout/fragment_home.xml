@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@color/bgColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".fragment.HomeFragment">
+        <ProgressBar
+            android:visibility="invisible"
+            android:padding="5dp"
+            style="?android:attr/progressBarStyleSmall"
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:visibility="invisible"
+            android:src="@drawable/ic_baseline_record"
+            android:id="@+id/record_image"
+            android:layout_toRightOf="@+id/progress_bar"
+            android:layout_toEndOf="@+id/progress_bar"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            tools:text="120"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:drawSelectorOnTop="true"
+            android:entries="@array/languages"
+            android:id="@+id/language_spinner"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/progress_bar"
+            android:id="@+id/text_recycler_rv"
+            android:background="@color/colorPrimary"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/text_items"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            />
+
+        <Button
+            android:text="@string/capture_voice"
+            android:id="@+id/record_button"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/text_recycler_rv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+        <Button
+            android:text="@string/end_call"
+            android:id="@+id/end_call_button"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_below="@+id/record_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+    </RelativeLayout>
+</ScrollView>
+
